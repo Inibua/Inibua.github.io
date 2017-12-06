@@ -34,7 +34,6 @@ function uploadPost() {
       $("#"+id).find("#heading").text(title);
       $("#"+id).find("#image").attr("src",imageLink)
       $("#closeUpload").trigger("click");
-        console.log("qm")
     }
 }
 
