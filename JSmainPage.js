@@ -117,7 +117,7 @@ function uploadComment(id) {
 function changeColorLike(id) {
     let color = $("#button"+id)[0]['style']['background-color'];
     if(color === "aliceblue" || color === ""){
-        $("#button"+id).css("background-color", 'blue');
+        $("#button"+id).css("background-color", '#00ccff');
     } else {
         $("#button"+id).css("background-color", 'aliceblue');
     }
