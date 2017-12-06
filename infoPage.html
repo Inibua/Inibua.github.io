@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Assignment1-2ID60</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="hoverButton.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!--Nav Bar html-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://i.pinimg.com/originals/bd/f8/69/bdf8695857520740279ad0da73cb8be4.jpg">SWS</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="file:///D:/TUe-2bdYear-2ndQuartile/2ID60%20-%20Web%20technology/index.html#">Posts</a></li>
+          <li class="active"><a href="#">Info</a></li>
+          <li><a href="file:///D:/TUe-2bdYear-2ndQuartile/2ID60%20-%20Web%20technology/profilePage.html" target="_self">Profile</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+  
+  <!--container for content of posts-->
+  <div class="container-fluid text-center container">    
+    <div class="info content">
+      <div class="creator container">
+        <h4>Created by:</h4>
+        <p>I am somebody and I am the one who did this.</p>
+      </div>
+      <div class="description container">
+        <h4>Description:</h4>
+        <p>This is a short description of the website.</p>
+        <br />
+        <p>The goal of this website is to share pictures and memes where different users can communicate via comments on posts.</p>
+      </div>
+      <div class="social-media-links container">
+        <h4>Social Media:</h4>
+        <div>
+          <h5><a href="#">Facebook</a></h5>
+          <h5><a href="#">Twitter</a></h5>
+          <h5><a href="#">Instagram</a></h5>
+        </div>
+      </div>
+    </div><!--end posts container-->
+   </div><!--end container-fluid text-center container-->
+    
+   <div class="container">
+    <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+   
+        <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">  
+              <form>
+                <h4>Username</h4>
+                <input class='username' />
+                <h4>Password</h4>
+                <input type='password' />
+                <input class='sign-in-button' type='submit' value='Sign In' />
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="JSmainPage.js"></script>
+<script src="JSHoverTopButton.js"></script>
+
+</html>
