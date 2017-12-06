@@ -33,7 +33,8 @@ function uploadPost() {
       $(".posts.content").prepend(createPost(id));
       $("#"+id).find("#heading").text(title);
       $("#"+id).find("#image").attr("src",imageLink)
-      $("#close").trigger("click");
+      $("#closeUpload").trigger("click");
+        console.log("qm")
     }
 }
 
@@ -47,7 +48,7 @@ function createPost(id) {
         '<div class="votes-comment-buttons">'+
           '<span class="votes-comments">'+
             '<span class="vote-buttons">'+
-              '<button class="like-button" id="button"'+id+'"><span class="glyphicon glyphicon-thumbs-up"></span> Like </button>'+
+              '<button class="like-button" id="button'+id+'" onClick="changeColorLike('+id+')"><span class="glyphicon glyphicon-thumbs-up"></span> Like </button>'+
             '</span>'+
             '<span class="show-comment-button">'+
               '<button type="button" class="open-comments-button" data-toggle="modal" data-target="#myModalCommentsPost'+id+'"><span class="glyphicon glyphicon-comment"></span> Comments </button>'+
@@ -111,4 +112,13 @@ function uploadComment(id) {
   } else {
     $("#myModalCommentsPost"+id).find(".comments-content").prepend(createComment(name, content));
   }
+}
+
+function changeColorLike(id) {
+    let color = $("#button"+id)[0]['style']['background-color'];
+    if(color === "aliceblue" || color === ""){
+        $("#button"+id).css("background-color", 'blue');
+    } else {
+        $("#button"+id).css("background-color", 'aliceblue');
+    }
 }

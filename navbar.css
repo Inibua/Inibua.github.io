@@ -132,7 +132,7 @@ footer {
 }
 
 .like-button {
-    background: aliceblue;
+    background-color: aliceblue;
     border: 1px solid black;
     min-width: 50%;
 }
