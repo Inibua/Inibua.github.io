@@ -11,7 +11,7 @@ function loadAllPosts() {
     let settings = {
         async: true,
         crossDomain: true,
-        url: "http://164.138.216.49:5000/post/all",//"http://localhost:5000/post/all",
+        url: "http://164.138.216.49/post/all",//"http://localhost:5000/post/all",
         method: "GET",
         dataType: "json",
         headers: {
@@ -36,7 +36,7 @@ function loadSinglePostComments(postId) {
     let settings = {
         async: true,
         crossDomain: true,
-        url: "http://164.138.216.49:5000/comment/getComments/" + postId,//"http://localhost:5000/comment/getComments/" + postId,
+        url: "http://164.138.216.49/comment/getComments/" + postId,//"http://localhost:5000/comment/getComments/" + postId,
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -154,7 +154,7 @@ function postPost(link, title) {
     let settings = {
         async: true,
         crossDomain: true,
-        url: "http://164.138.216.49:5000/post/create",//"http://localhost:5000/post/create",
+        url: "http://164.138.216.49/post/create",//"http://localhost:5000/post/create",
         method: "POST",
         headers: {
             "Content-Type": "application/json",

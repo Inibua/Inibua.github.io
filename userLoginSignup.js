@@ -27,10 +27,10 @@ function register() {
         crossDomain: true,
         url: "http://164.138.216.49/auth/signup",//"http://localhost:5000/auth/signup",
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Cache-Control": "no-cache"
-        },
+        //headers: {
+          //  "Content-Type": "application/json",
+            //"Cache-Control": "no-cache"
+        //},
         processData: false,
         data: JSON.stringify(userObject)
     }
