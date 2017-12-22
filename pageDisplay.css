@@ -1,0 +1,23 @@
+#posts-page {
+    display: block;
+}
+
+#info-page {
+    display: none;
+}
+
+
+#navbar-upload {
+    display: none;
+}
+
+.posts.content {
+    max-height: 100%;
+    padding-top: 10px:
+}
+
+.info.content {
+    max-height: 100%;
+    padding-top: 10px;
+    background-color: aliceblue;
+}

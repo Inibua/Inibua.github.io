@@ -1,0 +1,138 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+body {
+    background-image: url("http://freedesignfile.com/upload/2015/04/Hexagon-layered-seamless-pattern-vector-material-03.jpg");
+    background-size: 100%;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+input {
+    color: black;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    .profile-name {
+        color: white;
+        font-size: 28px;
+        display: table;
+        margin: 0 auto;
+    }
+}
+
+#uploadNewPostButton {
+    max-width: 100px;
+}
+.single-post-image {
+    max-width: 100%;
+    height: auto;
+    min-width: 100%;
+}
+
+.single-post {
+    background-color: #d7d7d7;
+    max-width: 765px;
+    border: 1px solid grey;
+    padding-bottom: 18px;
+}
+
+.single-post-image-container {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.button-active {
+    color: #C3FF00;
+    background-color: #535353;
+}
+
+.modal-content {
+    background-color: #535353;
+    padding: 1em 0 0;
+    color: #EFEFEF;
+    display: block;
+}
+
+#login-register .container {
+    padding: 0 0.5em;
+}
+
+#login-register h4 {
+    font-weight: 400;
+}
+
+#login-register input {
+    width: calc(100% - 1em);
+    border: 1px solid #d3d3d3;
+    height: 2em;
+    margin: 0.5em 0;
+    font-size: 1em;
+    padding: 0 0.5em;
+    border-radius: 4px;
+}
+
+#uploadPostForm h4 {
+    font-weight: 400;
+}
+
+#title-new-post {
+    width: calc(90% - 1em);
+    border: 1px solid #d3d3d3;
+    height: 2em;
+    margin: 0.5em 0;
+    font-size: 1em;
+    padding: 0 0.5em;
+    border-radius: 4px;
+}
+
+
+#link-picture-new-post {
+    border: none;
+}
+
+.cool-button {
+    background-color: #303030;
+    color: #C3FF00;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 100%;
+    height: 2.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.votes-comment-buttons {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.open-comments-button, .like-button {
+    min-width: 50%;
+    background-color: aliceblue;
+}
+
+
+.btn.btn-info.btn-lg {
+    background: #2e2e2e;
+    border-color: #2e2e2e;
+}
+
+
+.profile-name {
+    color: white;
+    font-size: 28px;
+}

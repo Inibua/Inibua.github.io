@@ -1,135 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
-  <title>SWS</title>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="hoverButton.css">
+    <title>SWS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=139307133440364';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <script src="alertifyjs/alertify.min.js"></script>
+    <link rel="stylesheet" href="alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.min.css" />
+    <link rel="stylesheet" href="indexHTML.css">
+    <link rel="stylesheet" href="hoverButton.css">
+    <link rel="stylesheet" href="pageDisplay.css">
+    <link rel="stylesheet" href="uploadButton.css">
+    <link rel="stylesheet" href="comments.css">
 </head>
- 
+
 <body>
-  <!--Nav Bar html-->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <!--Nav Bar html-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://i.pinimg.com/originals/bd/f8/69/bdf8695857520740279ad0da73cb8be4.jpg" target="_blank">SWS</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Posts</a></li>
-          <li><a href="infoPage.html">Info</a></li>
-          <li><a href="profilePage.html">Profile</a></li>
-          <li><a href="#" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalUpload">Upload</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
- 
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
- 
-  <!--container for content of posts-->
-  <div class="container-fluid text-center container">    
-    <div class="posts content">     
-      <div class="single-post container" id="post1">
-        <div class="single-post-image-container">
-          <h2 class="single-post-heading">Hello! My name is default post. I am just here so that the page is  not too empty. All other posts will be uploaded above me. </h2>
-          <img class="single-post-image" src="https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg" />
+                <a class="navbar-brand" href="https://i.pinimg.com/originals/bd/f8/69/bdf8695857520740279ad0da73cb8be4.jpg" target="_blank">SWS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li id="navbar-posts" class="active" onClick="toPosts()"><a href="#">Posts</a></li>
+                    <li id="navbar-info" onClick="toInfo()"><a href="#">Info</a></li>
+                    <li id="navbar-upload"><a href="#" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalUpload">Upload</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="login-navbar"><a href="#" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+                </ul>
+            </div>
         </div>
-      </div><!--end of single post container-->      
-      
-    </div><!--end posts container-->
-  </div><!--end container-fluid text-center container-->
- 
+    </nav>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-
-
-
-
+    <!--container for content of posts-->
+    <div class="container-fluid text-center container">
+        <div id="posts-page" class="posts content">
+            <div class="single-post container" id="post1">
+                <div class="single-post-image-container">
+                    <h2 class="single-post-heading">Hello! My name is default post. I am just here so that the page is not too empty. All other posts will be uploaded above me. </h2>
+                    <img class="single-post-image img-rounded" src="https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg" />
+                </div>
+            </div>
+            <!--end of single post container-->
+        </div>
+        <!--end posts container-->
+        <!--Begin info content-->
+        <div id="info-page" class="info content">
+            <div class="creator container">
+                <h4>Created by:</h4>
+                <p>I am somebody and I am the one who did this.</p>
+            </div>
+            <div class="description container">
+                <h4>Description:</h4>
+                <p>This is a short description of the website.</p>
+                <br />
+                <p>The goal of this website is to share pictures and memes where different users can communicate via comments on posts.</p>
+            </div>
+            <div class="social-media-links container">
+                <h4>Social Media:</h4>
+                <div>
+                    <h5><a href="#">Facebook</a></h5>
+                </div>
+            </div>
+        </div>
+        <!--end info content-->
+    </div>
+    <!--end container-fluid text-center container-->
+    <!--Login moal-->
     <div class="container">
-    <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-   
-        <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Login</h4>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="login-register">
+                            <h4>Username</h4>
+                            <input id="username" name="username" type="text" />
+                            <h4>Password</h4>
+                            <input id="password" name="password" type="password" />
+                            <input class='cool-button' type='submit' value='Sign In' onCLick="login()" />
+                            <input class='cool-button' type='submit' value='Sign Up' onClick="register()" />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="closeLogin" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">  
-              <form>
-                <h4>Username</h4>
-                <input class='username' />
-                <h4>Password</h4>
-                <input type='password' />
-                <input class='sign-in-button' type='submit' value='Sign In' />
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
- 
+    <!--End of login modal-->
+    <!--Begin upload post modal-->
     <div class="container" id="solo">
-    <!-- Modal -->
-      <div class="modal fade" id="myModalUpload" role="dialog">
-        <div class="modal-dialog">
-   
-        <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Create new Post</h4>
+        <!-- Modal -->
+        <div class="modal fade" id="myModalUpload" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Create new Post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="uploadPostForm">
+                            <h4>Title</h4>
+                            <input id='title-new-post' />
+                            <h4>Picture</h4>
+                            <span class="btn btn-default btn-file cool-button">
+                                Browse picture<input id='link-picture-new-post' type='file' onChange="encodeImagetoBase64(this)" value="Browse picture"/>
+                                <!--<input class='upload-new-post-button' type='submit' value='Upload'/>-->
+                            </span>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="uploadNewPostButton btn btn-default" id="uploadNewPostButton" onClick="uploadPost()">Upload</button>
+                        <button id="closeUpload" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">  
-              <form id="form">
-                <h4>Title</h4>
-                <input id='title-new-post' />
-                <h4>Picture</h4> 
-                <input id='link-picture-new-post' />
-                <!--<input class='upload-new-post-button' type='submit' value='Upload'/>-->
-                <button class="uploadNewPostButton" id="uploadNewPostButton" onClick="uploadPost()">Upload</button>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button id="closeUpload" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
- 
-   
-   
- 
- 
- 
+    <!--End upload post modal-->
     <footer class="container-fluid text-center">
         <p>End Page</p>
     </footer>
-   
+
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="JSmainPage.js"></script>
+<script src="userLoginSignup.js"></script>
+<script src="likeControls.js"></script>
+<script src="uploadPosts.js"></script>
+<script src="uploadComments.js"></script>
+<script src="pageNavigation.js"></script>
 <script src="JSHoverTopButton.js"></script>
- 
+<script src="uploadButton.js"></script>
+
 </html>
