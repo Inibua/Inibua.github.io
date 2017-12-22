@@ -25,7 +25,7 @@ function register() {
     let registerRequest = {
         async: true,
         crossDomain: true,
-        url: "https://cors-anywhere.herokuapp.com/http://164.138.216.49/auth/signup",//"http://localhost:5000/auth/signup",
+        url: "http://164.138.216.49/auth/signup",//"http://localhost:5000/auth/signup",
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -73,7 +73,7 @@ function loginRequestFunction(username, password) {
     let loginRequest = {
         async: true,
         crossDomain: true,
-        url: "https://cors-anywhere.herokuapp.com/http://164.138.216.49/auth/login",//"http://localhost:5000/auth/login",
+        url: "http://164.138.216.49/auth/login",//"http://localhost:5000/auth/login",
         method: "POST",
         headers: {
             "Content-Type": "application/json",

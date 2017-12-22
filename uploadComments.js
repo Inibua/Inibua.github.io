@@ -63,7 +63,7 @@ function postComment(postId, content) {
     let settings = {
         async: true,
         crossDomain: true,
-        url: "https://cors-anywhere.herokuapp.com/http://164.138.216.49:5000/comment/create",//"http://localhost:5000/comment/create",
+        url: "http://164.138.216.49:5000/comment/create",//"http://localhost:5000/comment/create",
         method: "POST",
         headers: {
             "Content-Type": "application/json",

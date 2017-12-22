@@ -27,7 +27,7 @@ function addOrRemoveLike(postID, userID) {
         let settings = {
             async: true,
             crossDomain: true,
-            url: "https://cors-anywhere.herokuapp.com/http://164.138.216.49:5000/post/removeLike",//"http://localhost:5000/post/removeLike",
+            url: "http://164.138.216.49:5000/post/removeLike",//"http://localhost:5000/post/removeLike",
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +47,7 @@ function addOrRemoveLike(postID, userID) {
         let settings = {
             async: true,
             crossDomain: true,
-            url: "https://cors-anywhere.herokuapp.com/http://164.138.216.49:5000/post/addLike",//"http://localhost:5000/post/addLike",
+            url: "http://164.138.216.49:5000/post/addLike",//"http://localhost:5000/post/addLike",
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
